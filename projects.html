@@ -1,0 +1,78 @@
+---
+layout: default
+---
+<style type="text/css">
+    body {
+        text-align: center;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3F3F2F;
+    }
+    a:hover {
+        color: #2F5F3F;           
+    }
+    div#description {
+        width:600px;
+        margin:0 auto;
+        font-weight: 300;
+        line-height: 27px;
+        color: #666666;  
+    }
+    div#title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top:50px;
+        margin-bottom: 5px;
+    }
+    div#subtitle {
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: #aaaaaa;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>
+
+
+<div id="projects">
+    {% for project in site.data.projects %}
+            <div id="title">
+                {{ project.name }}
+            </div>
+            <div id="subtitle">
+                {{ project.tagline }}
+            </div>
+
+            <div class="meta">
+                <span class="time">
+                    <span style="color:#3F3F2F">
+                        {{ project.time }}
+                    </span>
+                </span>
+                <span class="toolstack">| 
+                    <span style="color:#0087FF">
+                        toolstack:
+                    </span>
+                </span> 
+                {{ project.tools | join: ", " }}
+            </div>
+
+
+            <div id="description">{{ project.description | markdownify}}</div>
+
+            {% if project.url or project.github %}
+                {% if project.url %}
+                    <a href="{{ project.url }}" class="btn btn-md btn-default" target="_blank"><i class="fa fa-link fa-fw"></i><span style="color:#0087FF">view online</span></a>
+                {% endif %}
+                {% if project.github %}
+                    <a href="https://github.com/{{ project.github.url }}" class="btn btn-md btn-default" target="_blank"><i class="fa fa-github fa-fw"></i><span style="color:#0087FF">view on GitHub</span></a>
+                {% endif %}
+
+            {% endif %}
+        </br>
+        </br>
+    {% endfor %}
+</div>
