@@ -1,58 +1,11 @@
-- name: divemusic
-  time: October 2015
+- name: spring-boot-forum
+  time:
   url:
-  tagline: mapping out the world's music using SoundCloud API
-  tools: Javascript, AngularJS, Node, MongoDB
+  tagline: A simple web forum system 一个简单的论坛程序
+  tools: Spring Boot + Mybatis + Maven + Thymeleaf + Bootstrap
   description: |
-    Pulled user location and audio from SoundCloud and mapped out the world's preferences in music. Clicking on each country will show the
-    top tracks played in that specific country.
+    Major features: Making new post/comment; User privileges management; Admin dashboard; User avatar; Post list pagination; Registration Email confirmation etc.
   github:
-    url: zhued/divemusic
-    branch: master
-
-- name: anochat
-  time: Feb 2015 +
-  url:
-  tagline: anonymous chat client
-  tools: Java
-  description: |
-    **Currently in progress..** Anonymous chat room/client for fun with friends and understanding web/network sockets.
-  github:
-    url: zhued/anochat
-    branch: master
-
-- name: leaguestats
-  time: Feb 2015 +
-  url:
-  tagline: league of legends stats tracker using RIOT API
-  tools: Python, JS, AngularJS, Node, MongoDB
-  description: |
-    A system that pulls "summoner" data from the popular online game, League of Legends, and creates a weeklong heatmap of when you play most.
-    It maps out every hour of the day from Monday to Sunday, so a player's game time trends are averaged in a easy to read format.
-  github:
-    url: zhued/leaguestats
-    branch: master
-
-- name: ICUEM
-  time: Jan 2015 - May 2015
-  url:
-  tagline: interactive CU engineering map
-  tools: Android, iOS, JS, Node, MongoDB, Docco
-  description: |
-    Making the Engineering Center at CU Boulder not a nightmare to navigate. Me and three other students collaborated and created an iOS and Andriod
-    apps that map out the Engineering Center using the architecture blueprints. We incorporated many coding practices such as pair programming, Test
-    Driven Development, Continuous Integration, and AutoDocumentation.
-  github:
-    url: zhued/ICUEM
-    branch: master
-
-- name: zhued.github.io
-  time: Dec 2014 - Jan 2015+
-  url: https://zhued.github.io/
-  tagline: personal portfolio/blog site
-  tools: HTML, SASS, JS, Jekyll, Markdown
-  description: Well, er, look around!
-  github:
-    url: zhued/zhued.github.io
+    url: https://github.com/qingwenwei/spring-boot-forum
     branch: master
 
